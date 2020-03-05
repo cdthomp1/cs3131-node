@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/header.ejs %>
+</head>
+
+<body>
+    <% include ../partials/nav.ejs %>
+    <h1 class="header-text">This is the rate page</h1>
+
+    <p>Your weight is: <%= packageWeight %></p>
+
+    <p>Your type is: <%= packageType %></p>
+
+
+    <% if (packageRate.class === "danger") { %>
+        <p class="text-danger">Your rate is: <%= packageRate.ermsg %></p>
+    <% } else { %>
+        <p>Your rate is: <%= packageRate.rate %></p>
+    <% }  %>
+
+
+
+    <% include ../partials/scripts.ejs %>
+
+</body>
+
+</html>
